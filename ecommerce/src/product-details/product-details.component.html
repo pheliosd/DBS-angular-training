@@ -1,0 +1,36 @@
+<p>product-details works!</p>
+
+
+
+<div class="container">
+  <div class="form-group">
+    <label for="productName" class="form-label mt-4">Name</label>
+    <input type="text" class="form-control"
+           id="productName" aria-describedby="productName" placeholder="Enter product name"
+    [(ngModel)]="productDetails.name"
+    >
+
+  </div>
+
+  <div class="form-group">
+    <label for="productPrice" class="form-label mt-4">Price</label>
+    <input type="text" class="form-control"
+           id="productPrice" aria-describedby="productPrice" placeholder="Enter product price"
+    [(ngModel)]="productDetails.price"
+    >
+  </div>
+
+  <div class="form-group">
+    <label for="productQuantity" class="form-label mt-4">Quantity</label>
+    <input type="number" class="form-control"
+           id="productQuantity" aria-describedby="productQuantity" placeholder="Enter product Quantity"
+    [(ngModel)]="productDetails.quantity"
+    >
+  </div>
+</div>
+<!--{{productDetails|json}}-->
+
+<div class="container">
+  <button class="btn btn-primary" (click)="handleToggler()" >Toggle</button>
+  <h1 *ngIf ="showToggler" >Show me</h1>
+</div>

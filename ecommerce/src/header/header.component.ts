@@ -8,5 +8,6 @@ import { Component } from "@angular/core";
     }
 )
 export class HeaderComponent{
-    title="I am Headder";
-} 
+    title="DBS";
+    navitems =["Home", "Sports", "Apparel"];
+}
