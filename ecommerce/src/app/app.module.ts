@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HeaderComponent } from 'src/header/header.component';
 import { AppComponent } from './app.component';
 import { FooterComponent } from 'src/footer/footer.component';
-// import { BodyComponent } from 'src/body/body.component';
+// import {BrowserModule} from '@angular/platform-browser'
+import { RouterModule} from "@angular/router";
 import { BodyComponent } from 'src/body/body.component';
 import {ProductsComponent} from 'src/products/products.component';
 import { ProductDetailsComponent } from '../product-details/product-details.component'
@@ -33,7 +34,16 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot([
+      {path: "login", component:LoginComponent },
+      {path: "register", component:RegisterComponent },
+      {path: "forgot-password", component: ForgotpasswordComponent },
+      {path: "reset", component:ResetpasswordComponent },
+      {path: "profile", component:ProfileComponent },
+      {path: "home", component:HomeComponent },
+      {path: "", component:HomeComponent }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
